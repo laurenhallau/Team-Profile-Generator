@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A command line application, prompting user to enter information on an employee (manager, employee or engineer) and then an html is created with the data",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenhallau/Team-Profile-Generator.git"
+  },
+  "author": "Lauren W Hallau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurenhallau/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/laurenhallau/Team-Profile-Generator#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.4",
+    "path": "^0.12.7"
+  }
+}
