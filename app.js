@@ -17,7 +17,6 @@ const render = require("./lib/htmlRenderer");
             type: "input",
             name: "name",
             message: "What is the employee's name?",
-            // validate: validateEmployeeName
         },
     ])
 }
