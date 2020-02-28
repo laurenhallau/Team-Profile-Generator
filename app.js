@@ -1,6 +1,8 @@
+//constructors
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+//npm packages
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -10,16 +12,15 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 ​
 const render = require("./lib/htmlRenderer");
 ​
-​function init() {
-    inquirer
-    .prompt([
-        {
-            type: "input",
-            name: "name",
-            message: "What is the employee's name?",
-        },
-    ])
+​function askQuestions() {
+    inquirer.prompt([{
+        type: "list",
+        message: "What do you want to do?",
+        choices: ["add Manager", "add Engineer", "add Intern", "Finished. Ready to print HTML!"],
+        name: "addEmployee",
+    }]).then(console.log(response));
 }
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 ​
@@ -42,3 +43,4 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an 
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work!```
+
