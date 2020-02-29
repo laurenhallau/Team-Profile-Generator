@@ -139,8 +139,8 @@ function createEngineer() {
         },
         {
             type : "input",
-            name : "engineerGitHub",
-            message: "Please enter the Engineer's GitHub",
+            name : "engineerGithub",
+            message: "Please enter the Engineer's Github",
             validate: answer => {
                 if(answer !== "") {
                     return true;
@@ -150,7 +150,7 @@ function createEngineer() {
         },
     ]).then(answers => {
         console.log(answers);
-        const engineer = new Engineer (answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerOffice);
+        const engineer = new Engineer (answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
         console.log(engineer);
         teamMembers.push(engineer);
         createTeam();
@@ -207,7 +207,7 @@ function createIntern() {
         },
     ]).then(answers => {
         console.log(answers);
-        const intern = new Intern (answers.internName, answers.internID, answers.internEmail, answers.internOffice);
+        const intern = new Intern (answers.internName, answers.internID, answers.internEmail, answers.internSchool);
         console.log(intern);
         teamMembers.push(intern);
         createTeam();
