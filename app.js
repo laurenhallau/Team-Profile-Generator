@@ -91,7 +91,7 @@ function createTeam() {
                 createIntern();
                 break;   
             default : 
-                console.log("build your team");
+                console.log("Building your team...");
                 buildTeam();
         }
     });
