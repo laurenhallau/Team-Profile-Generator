@@ -6,8 +6,9 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output")
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+// const OUTPUT_DIR = path.resolve(__dirname, "output")
+const outputPath = path.resolve(__dirname, "output", "team.html");
+
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
@@ -88,15 +89,16 @@ function createTeam() {
             case "Intern" :
                 console.log("intern");
                 createIntern();
-                break;
-            case "End" :
-                console.log("ending process");
-                buildTeam();    
+                break;   
             default : 
                 console.log("build your team");
+                buildTeam();
         }
-    })
-}
+    });
+};
+
+
+
 function createEngineer() {
     inquirer
     .prompt([
@@ -209,11 +211,10 @@ function createIntern() {
         console.log(intern);
         teamMembers.push(intern);
         createTeam();
-    })
+    });
 }
-createManager();
-
 function buildTeam() {
     fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
-    console.log(buildTeam());
-  }
+};
+createManager();
+
