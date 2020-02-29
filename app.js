@@ -19,18 +19,18 @@ function createManager () {
         {
             type : "input",
             name : "managerName",
-            message: "Please enter the Manager name",
+            message: "Please enter the Manager's name",
             validate: answer => {
                 if(answer !== "") {
                     return true;
                 }
-                return "Please enter complete name";
+                return "Please enter a complete name";
             }
         },
         {
             type : "input",
             name : "managerID",
-            message: "Please enter the Manager ID",
+            message: "Please enter the Manager's ID",
             validate: answer => {
                 var pass = answer.match( /^[1-9]\d*$/); 
                 if(pass) {
@@ -42,7 +42,7 @@ function createManager () {
         {
             type : "input",
             name : "managerEmail",
-            message: "Please enter the Manager email",
+            message: "Please enter the Manager's email",
             validate: answer => {
                 var pass = answer.match( /\S+@\S+\.\S+/); 
                 if(pass) {
@@ -54,7 +54,7 @@ function createManager () {
         {
             type : "input",
             name : "managerOffice",
-            message: "Please enter the Manager office number",
+            message: "Please enter the Manager's office number",
             validate: answer => {
                 var pass = answer.match( /^[1-9]\d*$/); 
                 if(pass) {
@@ -110,7 +110,7 @@ function createEngineer() {
                 if(answer !== "") {
                     return true;
                 }
-                return "Please enter complete name";
+                return "Please enter a complete name";
             }
         },
         {
@@ -145,7 +145,7 @@ function createEngineer() {
                 if(answer !== "") {
                     return true;
                 }
-                return "Please enter complete name";
+                return "Please enter a complete name";
             }
         },
     ]).then(answers => {
@@ -167,7 +167,7 @@ function createIntern() {
                 if(answer !== "") {
                     return true;
                 }
-                return "Please enter complete name";
+                return "Please enter a complete name";
             }
         },
         {
@@ -202,7 +202,7 @@ function createIntern() {
                 if(answer !== "") {
                     return true;
                 }
-                return "Please enter complete name";
+                return "Please enter a complete name";
             }
         },
     ]).then(answers => {
