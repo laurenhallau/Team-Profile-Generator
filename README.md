@@ -10,4 +10,7 @@ so that I have quick access to emails and GitHub profiles
 ![Screenshot](./devl/screenshot.png)
 
 ## Live Demo
+![](https://media.giphy.com/media/LMc5HEBnHDx5ysuA7d/giphy.gif)
+
+## Tests Demo
 ![](https://media.giphy.com/media/cixMoZDS7hxLF13Acm/giphy.gif)
